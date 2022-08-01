@@ -1,0 +1,28 @@
+/* 기본 회원 정보 */
+insert into m_member(id, password, name, nickname, birth, phone, address) values('rodaka123', 'rkddlswo', '강인재', '알감자', '20000218', '010-9565-7072', '경남 창원시 의창구');
+
+/* 기본 영화 정보 */
+insert into movie values(101, '마녀(魔女) Part2. The Other One', 12000, '박훈정', '신시아, 박은빈, 서은수, 진구, 이종석, 조민수 등', 'SF스릴러', 137);
+insert into movie values(102, '어벤져스:엔드게임', 11000, '루소 형제', '로다주, 크리스 에반스, 톰 홀랜드, 마크 러펄로 등', 'SF액션', 181);
+insert into movie values(103, '기생충(Parasite)', 10000, '봉준호', '송강호, 이선균, 조여정, 최우식, 박소담 등', '범죄', 132);
+insert into movie values(104, '명량(鳴梁)', 9000, '김한민', '최민식, 류승룡, 조진웅, 김명곤, 진구, 이정현 등', '역사물', 128);
+insert into movie values(105, '전우치(Jeon Woochi)', 8000, '최동훈', '강동원, 김윤석, 임수정, 유해진 등', '판타지', 136);
+
+/* 기본 영화 예매 정보 */
+insert into m_order values(1001, '1000', '3-3,3-4',  2, 24000, 101, 'rodaka123');
+
+/* 기본 게시글 정보 */
+insert into event values(1, '[마녀2]개봉일정 연기', '개봉 일정이 xx월 xx일로 연기되었습니다.', sysdate, 0, 1, 0, 0, 'rodaka123', 'rkddlswo');
+
+/* 기본 상품 정보 */
+insert into product values('p100001', '에어팟 프로', 5, 215000);
+insert into product values('p100002', '갤럭시 버즈', 10, 155000);
+insert into product values('p100003', '갤럭시 워치', 15, 285000);
+insert into product values('p100004', '애플워치', 15, 350000);
+insert into product values('p100005', '아이언맨 피규어', 3, 58000);
+insert into product values('p100006', '스타벅스 텀블러', 30, 22000);
+insert into product values('p100007', '블루투스 키보드 마우스 세트', 15, 15000);
+insert into product values('p100008', '블루투스 스피커', 10, 78000);
+
+/* 기본 상품 주문 정보 */
+insert into p_order values(1, '경남 창원시 의창구', '오실 때 전화 주세요.', 1, 22000, 'rodaka123', 'p100006');
