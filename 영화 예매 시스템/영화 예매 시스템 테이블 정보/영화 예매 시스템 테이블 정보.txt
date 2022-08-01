@@ -1,0 +1,70 @@
+영화관2 데이터베이스
+
+<회원 테이블>
+create table m_member(
+   id varchar2(45) primary key,
+   password varchar2(45) not null,
+   name varchar2(13),
+   nickname varchar2(15),
+   birth date,
+   phone varchar2(13),
+   address varchar2(80),
+   grade varchar2(11) default 'ONE',
+   point number(11) default 0);
+
+아이디 비번 이름 별명 생일 전화번호 주소
+
+<영화 테이블>
+create table movie(
+   m_code number(3) primary key,
+   m_name varchar2(45) not null,
+   m_price number(6) not null),
+   m_director varchar2(20),
+   m_actor varchar2(80),
+   m_category varchar2(15),
+   m_duration number(4));
+영화 코드, 영화 이름, 영화 가격. 감독, 출연배우, 장르, 진행시간
+
+
+<영화 예약 정보 테이블>
+create table m_order(
+   orderno number(11) primary key,
+   id varchar2(45) references m_member(id) on delete cascade,
+   m_code number(3) references movie(m_code) on delete cascade,
+   m_time varchar2(11),
+   order_seat varchar2(80) not null,
+   order_cnt number(7),
+   order_price number(20));
+예약번호, 회원 아이디, 영화 코드, 영화 시간대, 예약 좌석 번호, 예약 인원, 예약 금액
+
+<이벤트 게시판>
+create table event(
+   num number(11) primary key,
+   id varchar2(45) not null,
+   password varchar2(45) not null,
+   title varchar2(60),
+   memo varchar(3000),
+   time date,
+   hit number(11),
+   ref number(11),
+   indent number(11), 
+   step number(11));
+글 번호, 아이디, 비밀번호, 제목, 메모, 작성 시간, 조회수, 부모 글 번호, 들여쓰기, 몇 번째인지 구분
+
+포인트 상품
+create table product(
+   p_code varchar2(15) primary key,
+   p_name varchar2(45) not null,
+   p_qty number(11) not null,
+   p_price number(11) not null);
+
+상품 주문 정보
+create table p_order(
+   p_orderno number(11) primary key,
+   id varchar2(45) not null references m_member(id) on delete cascade,
+   address varchar2(80) not null,
+   request varchar2(80),
+   p_code varchar2(15) not null,
+   order_qty number(5) not null,
+   total number(11));
+(상품)주문번호, 회원 아이디, 주소, 요청사항, 상품 코드, 주문개수, 최종가격
