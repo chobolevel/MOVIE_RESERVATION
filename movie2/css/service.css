@@ -1,0 +1,175 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+* {
+	padding : 0;
+	margin : 0;
+	font-family : "맑은 고딕";
+}
+ul li {
+	list-style-type : none;
+}
+a {
+	text-decoration : none;
+}
+body {
+	width : 100%;
+	height : 100%;
+	background-image : url("../img/main_bg.jpg");
+	background-repeat : no-repeat;
+	background-size : cover;
+	background-color : #000;
+	background-position : center;
+}
+div.reserve {
+	right : 0px;
+	bottom : 20px;
+	width : 170px;
+	height : 50px;
+	background-color : rgb(237, 49, 36);
+	position : fixed;
+	border-radius : 10px 0px 0px 10px;
+	text-align : center;
+	z-index : 10;
+}
+div.reserve i {
+	font-size : 22px;
+	line-height : 50px;
+}
+div.reserve a {
+	color : #fff;
+}
+.container {
+	width : 1200px;
+	background-color : #fff;
+	margin : 40px auto;
+	border-radius : 20px;
+	padding : 20px;
+	box-shadow : 0px 0px 10px #000;
+}
+/* 헤더 영역 */
+header {
+	width : 100%;
+	height : 120px;
+	position : relative;
+	margin-bottom : 10px;
+	border-bottom : 1px solid rgb(237, 49, 36);
+}
+header > a {
+	position : absolute;
+	left : 20px;
+	line-height : 130px;
+	font-family: 'Black Han Sans', sans-serif;
+	color : rgb(237, 49, 36);
+	font-size : 50px;
+}
+header > ul.top-menu {
+	position : absolute;
+	right : 10px;
+	top : 10px;
+}
+header > ul.top-menu > li {
+	display : inline-block;
+	width : 100px;
+	text-align : center;
+	border-left : 1px solid #ccc;
+}
+header > ul.top-menu > li:first-child {
+	border : none;
+}
+header > ul.top-menu > li > a {
+	color : #555;
+	font-style : italic;
+}
+/* 네비게이션 영역 */
+nav {
+	width : 100%;
+	height : 60px;
+	line-height : 50px;
+	margin-bottom : 10px;
+	border-bottom : 1px solid rgb(237, 49, 36);
+}
+ul.main-menu > li {
+	display : inline-block;
+	margin-left : 50px;
+}
+ul.main-menu > li > a {
+	font-size : 18px;
+	color : #555;
+	transition : all 0.3s;
+}
+ul.main-menu > li > a:hover {
+	font-size : 19px;
+	font-weight : 700;
+}
+/* 섹션 및 아티클 영역 */
+section {
+	width : 100%;
+	margin-bottom : 10px;
+}
+section div.msg {
+	width : 100%;
+	height : 300px;
+	text-align : center;
+	margin-top : 100px;
+	margin-bottom : 100px;
+}
+section div.msg i {
+	font-size : 100px;
+	color : red;
+}
+section div h1 {
+	padding : 20px;
+}
+section div p {
+	padding : 10px;
+	color : #555;
+}
+section div a {
+	display : inline-block;
+	width : 100px;
+	height : 30px;
+	background-color : rgb(237, 49, 36);
+	color : #fff;
+	border : none;
+	border-radius : 10px;
+	line-height : 30px;
+	margin-top : 30px;
+	transition : all 0.3s;
+}
+section div a:hover {
+	box-shadow : 0px 0px 3px #000;
+}
+/* 푸터 영역 */
+footer {
+	width : 100%;
+	height : 110px;
+	border-top : 1px solid rgb(237, 49, 36);
+	position : relative;
+}
+footer ul.contact {
+	width : 50%;
+	height : 40px;
+	line-height : 40px;
+	position : absolute;
+	right : 0;
+	top : 0;
+	text-align : right;
+}
+footer ul.contact li {
+	display : inline-block;
+	width : 120px;
+	text-align : center;
+	margin-right : 10px;
+}
+footer ul.contact li i {
+	font-size : 20px;
+}
+footer ul.contact li a {
+	color : #555;
+	font-weight : 700;
+}
+footer p {
+	margin-top : 14px;
+	color : #555;
+	text-indent : 30px;
+}
